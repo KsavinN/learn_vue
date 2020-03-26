@@ -1,28 +1,21 @@
 <template>
   <div id="app">
-    <button-counter></button-counter>
+    <ButtonCounter />
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-
-Vue.component("button-counter", {
-  data: function() {
-    return {
-      count: 0
-    };
-  },
-  template:
-    '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
-});
+import ButtonCounter from "./ButtonCounter";
 
 export default {
   name: "App",
   data: () => ({
     txt: "test"
   }),
-  methods: {}
+  methods: {},
+  components: {
+    ButtonCounter
+  }
 };
 </script>
 
